@@ -1,0 +1,538 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="../static/assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>CAS</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="../static/assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="../static/assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../static/assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="../static/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+   <div class="sidebar" data-color="azure" data-image="../static/assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="driver.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Driver Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="area.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Area Profiling</p>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="maps.html">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Date compare</p>
+                    </a>
+                </li>
+                                 <li>
+                    <a href="prediction.html">
+                        <i class="pe-7s-graph2"></i>
+                        <p>Prediction</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="alarm.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Real Time Alarm</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+    <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Prediction</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                <p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-sm hidden-xs"></b>
+                                    <span class="notification hidden-sm hidden-xs">5</span>
+                  <p class="hidden-lg hidden-md">
+                    5 Notifications
+                    <b class="caret"></b>
+                  </p>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+                <p class="hidden-lg hidden-md">Search</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                               <p>Account</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <p>
+                    Dropdown
+                    <b class="caret"></b>
+                  </p>
+
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+            <li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+      <!--
+        "Garudachar,Playa","Hudi","Kadugodi","Other","Devasandra","Hagadur"
+,"Bellanduru","Marathahalli","Dodda Nekkundi","Varthuru","HAL Airport"
+,"Vijnana Nagar","Konena Agrahara","A Narayanapura","C,V,Raman Nagar"
+,"Jeevanbhima Nagar","HSR Layout","Domlur","Jogupalya","Hoysala Nagar"
+,"New Tippasandara","Benniganahalli","Singasandra","Basavanapura"
+,"Halsoor","Agaram","Shantala Nagar","Sampangiram Nagar","Sudham Nagara"
+,"Dharmaraya Swamy Temple","Chickpete","Banasavadi","Horamavu"
+,"Kacharkanahalli","Kammanahalli","Vijnanapura","Ramamurthy Nagar"
+,"K R Puram","BTM,Layout","Madivala","Gurappanapalya","J P Nagar"
+,"Sarakki","Jaraganahalli","Vasanthpura","Hemmigepura","Yelchenahalli"
+,"Jayanagar East","Bharathi Nagar"
+      -->
+
+
+       <div class="ui-widget">
+  <label>Day</label>
+  <select id="day">
+    <option value="Any">Any</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+
+
+
+    
+
+  </select>
+</div>
+      
+<button type="button" class="btn btn-info" id="submit">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+           <div id = "container1" style = "width:100%">
+         <div class="header">
+                                <h4 class="title">Accident Hotspots</h4>
+                                
+                            </div>
+                            <div style="float:left; width: 50%;">
+                                <table class="table table-hover table-striped" id="table1">
+                                <!--
+                                    <thead>
+                                        <th>Rank</th>
+                                      <th>Area</th>
+                                      <th>Threat Value</th>
+                                      
+                                      
+                                    </thead>
+                                    <tbody>
+                                        <tr class='clickable-row' data-href='driver indvid.html'>
+                                          <td>1</td>
+                                          <td><a href="driver_individ.html">Dakota Rice</a></td>
+                                          <td>$36,738</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>2</td>
+                                          <td>Minerva Hooper</td>
+                                          <td>$23,789</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>3</td>
+                                          <td>Sage Rodriguez</td>
+                                          <td>$56,142</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>4</td>
+                                          <td>Philip Chaney</td>
+                                          <td>$38,735</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>5</td>
+                                          <td>Doris Greene</td>
+                                          <td>$63,542</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>6</td>
+                                          <td>Mason Porter</td>
+                                          <td>$78,615</td>
+                                          
+                                        </tr>
+                                    </tbody>
+                                    -->
+                                </table>
+
+                            </div>
+
+          <div style = "float:left; width: 50%;">
+     <div id="floating-panel" >
+      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      <button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius()">Change radius</button>
+      <button onclick="changeOpacity()">Change opacity</button>
+    </div>
+        <div id="map" ></div>
+      </div>
+      </div>
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+    
+</div>
+
+
+</body>
+
+
+ 
+    <style>
+  .custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+  }
+  #map {
+    height: 500px;
+    
+    
+}
+#table1 {
+    height: 500px;
+    
+    
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  </script>
+  
+        <!--   Core JS Files   -->
+    <script src="../static/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+  <script src="../static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <!--  Charts Plugin -->
+  <script src="../static/assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="../static/assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+  <script src="../static/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+  <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+   <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>
+       <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Year', 'Asia'],
+               ['2012',  900],
+               ['2013',  1000],
+               ['2014',  1170],
+               ['2015',  1250],
+               ['2016',  1530]
+            ]);
+
+            var options = {title: 'Population (in millions)'}; 
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+  <script>
+//var latlon=0;
+      // This example requires the Visualization library. Include the libraries=visualization
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
+        document.getElementById("submit").onclick = function() {myFunction()};
+var latlon=[];
+var lat;
+var lon;
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+  latlon=[];
+var day=document.getElementById("day").value;
+var area=document.getElementById("area").value;
+console.log(day+" "+area);
+//var area=document.getElementById("area").value;
+//console.log(area);
+var url='http://127.0.0.1:5000/area/'+area+'[]'+cas; //http://127.0.0.1:5000/area/Hudi{}FCW
+
+var request = new XMLHttpRequest();
+request.open('GET', url);
+request.responseType = 'json';
+request.send();
+request.onload = function() 
+{
+  var json1=request.response;
+  var area=json1.area;
+  var freq=json1.freq;
+  lat=json1.lati;
+  lon=json1.longi;
+  var index=json1.index;
+  console.log(lon[0]);
+  
+
+  for(var i=0;i<lat.length;i++)
+  {
+    var google_maps_obj;
+    console.log(lat[i]);
+    latlon.push(new google.maps.LatLng(parseFloat(lat[i]),parseFloat(lon[i])));
+  }
+  console.log(latlon);
+    /*<th>Rank</th>
+                                      //<th>Area</th>
+                                      <th>Threat Value</th>
+                                      
+                                      
+                                    </thead>
+                                    <tbody>
+                                        <tr class='clickable-row' data-href='driver indvid.html'>
+                                          <td>1</td>
+                                          <td><a href="driver_individ.html">Dakota Rice</a></td>
+                                          <td>$36,738</td>
+                                          **/
+    document.getElementById("table1").innerHTML="";
+    var thead=document.createElement("thead");
+    var tbody=document.createElement("tbody");
+    
+    thead.innerHTML="<th>Rank</th>"+"<th>Area</th>"+"<th>"+cas+"</th>";
+    for(var i=0;i<index.length;i++)
+      {
+        if(area.length>1)
+      tbody.innerHTML=tbody.innerHTML+"<tr><td>"+index[i]+"</td><td>"+area[i]+"</td><td>"+freq[i]+"</td>";
+        else
+      tbody.innerHTML=tbody.innerHTML+"<tr><td>"+index[i]+"</td><td>"+area[i]+"</td><td>"+freq[i]+"</td></tr>";
+    }
+    console.log(thead);
+    document.getElementById("table1").appendChild(thead);
+    document.getElementById("table1").appendChild(tbody);
+
+}
+  console.log(latlon);
+
+
+      
+
+
+            var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+        script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBSXRGptSXsXDHe6O9-4Dh-Z0eGg5dMU6w&libraries=visualization&callback=initMap";
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+    }
+    var map, heatmap;
+          function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 12.97, lng: 77.59},
+          mapTypeId: 'satellite'
+        });
+
+        heatmap = new google.maps.visualization.HeatmapLayer({
+          data: getPoints(),
+          map: map
+        });
+      }
+
+      function toggleHeatmap() {
+        heatmap.setMap(heatmap.getMap() ? null : map);
+      }
+
+      function changeGradient() {
+        var gradient = [
+          'rgba(0, 255, 255, 0)',
+          'rgba(0, 255, 255, 1)',
+          'rgba(0, 191, 255, 1)',
+          'rgba(0, 127, 255, 1)',
+          'rgba(0, 63, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 223, 1)',
+          'rgba(0, 0, 191, 1)',
+          'rgba(0, 0, 159, 1)',
+          'rgba(0, 0, 127, 1)',
+          'rgba(63, 0, 91, 1)',
+          'rgba(127, 0, 63, 1)',
+          'rgba(191, 0, 31, 1)',
+          'rgba(255, 0, 0, 1)'
+        ]
+        heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+      }
+
+      function changeRadius() {
+        heatmap.set('radius', heatmap.get('radius') ? null : 20);
+      }
+
+      function changeOpacity() {
+        heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+      }
+
+      // Heatmap data: 500 Points
+      function getPoints() {
+        console.log(latlon);
+        return latlon;
+      }
+  
+    </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSXRGptSXsXDHe6O9-4Dh-Z0eGg5dMU6w&libraries=visualization&callback=initMap">
+    </script>
+
+
+</html>
+
+<!--
+                           
+    
+
+-->

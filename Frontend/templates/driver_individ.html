@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="../static/assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Road Safety</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="../static/assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="../static/assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../static/assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="../static/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+
+        <div class="sidebar" data-color="azure" data-image="../static/assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="driver.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Driver Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="area.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Area Profiling</p>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="maps.html">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Maps</p>
+                    </a>
+                </li>
+                <li>
+                                     <li>
+                    <a href="prediction.html">
+                        <i class="pe-7s-graph2"></i>
+                        <p>Prediction</p>
+                    </a>
+                </li>
+                    <a href="alarm.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Real Time Alarm</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel" style="text-align:center">
+         <h4 style="color:#000000;">Driver name</h>
+         <div id="chart"></div>
+    </div>
+
+
+</body>
+    <script> 
+    var myData=[100,323,456,331,201];
+    var labels=["PCD","CAS","PPP","PDS","PDA"];
+    var margin={
+        top:30,
+        right:30,
+        bottom:40,
+        left:50
+    }
+
+    var height=500-margin.top-margin.bottom;
+    var width=500-margin.right-margin.right;
+    //var barWidth=35;
+    //var barOffset=5;
+    
+    var yScale=d3.scale.linear()
+        .domain([0, d3.max(myData)])
+        .range([0, height])
+
+    var xScale=d3.scale.ordinal()
+        .domain(d3.range(0,myData.length))
+        .rangeBands([0,width])
+
+
+
+    var colors=d3.scale.linear()
+        .domain([0,myData.length])
+        .range(['#101055','#90ee90'])
+
+    d3.select('#chart').append('svg')
+        .attr('width',width+margin.right+margin.left)
+        .attr('height',height+margin.top+margin.bottom)
+        .append('g')
+        .attr('transform','translate('+margin.left+','+margin.top+')')
+        .style('background','#f4f4f4')
+        .selectAll('rect')
+            .data(myData)
+            .enter().append('rect')
+                .style('fill',function(d,i){
+                    return colors(i);
+                })
+                .attr('width',xScale.rangeBand())
+                .attr('height',function(d){
+                    return yScale(d);
+                })
+                .attr('x',function(d,i){
+                    return xScale(i);
+                })
+                .attr('y',function(d){
+                    return height-yScale(d);
+                })
+
+        var vScale=d3.scale.linear()
+        .domain([0, d3.max(myData)])
+        .range([height,0])
+
+    var hScale=d3.scale.ordinal()
+        .domain(d3.range(0,myData.length))
+        .rangeBands([0,width])
+        
+
+
+
+
+    var vAxis=d3.svg.axis()
+        .scale(vScale)
+        .orient('left')
+        .ticks(5)
+        .tickPadding(5)
+
+    var vGuide= d3.select('svg')
+        .append('g')
+            vAxis(vGuide)
+            vGuide.attr('transform','translate('+margin.left+','+margin.top+')')
+            vGuide.selectAll('path')
+                .style('fill','none')
+                .style('stroke','#000')
+            vGuide.selectAll('line')
+                .style('stroke','#000')
+
+    var hAxis=d3.svg.axis()
+        .scale(hScale)
+        .orient('bottom')
+        .tickValues(hScale.domain().filter(function(d,i){
+            return labels(i);
+            }));
+
+    var hGuide= d3.select('svg')
+        .append('g')
+            hAxis(hGuide)
+            hGuide.attr('transform','translate('+margin.left+','+(height+margin.top)+')')
+            hGuide.selectAll('path')
+                .style('fill','none')
+                .style('stroke','#000')
+            hGuide.selectAll('line')
+                .style('stroke','#000')
+    
+    </script>
+    <!--   Core JS Files   -->
+    <script src="../static/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="../static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="../static/assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="../static/assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="../static/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="../static/assets/js/demo.js"></script>
+</html>
