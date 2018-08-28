@@ -43,10 +43,10 @@ request.onload = function()
     var thead=document.createElement("thead");
     var tbody=document.createElement("tbody");
     
-    thead.innerHTML="<th>Rank</th><th>Name</th><th>Freq</th><th>FCW</th><th>HMW</th><th>LDWL</th><th>LDWR</th><th>Overspeed</th><th>PCW</th><th>UFCW</th>";
+    thead.innerHTML="<th>Rank</th><th>Name</th><th>Freq</th><th>FCW</th><th>HMW</th><th>LDWL</th><th>LDWR</th><th>Overspeed</th><th>PCW</th><th>UFCW</th><th>Details</th>";
     for(var i=0;i<names_arr.length;i++)
       {
-        tbody.innerHTML=tbody.innerHTML+"<tr><td>"+rank[i]+"</td><td><button id="+names_arr[i].toString()+">"+names_arr[i]+"</button></td><td>"+overall[i]+"</td><td>"+FCW[i]+"</td><td>"+HMW[i]+"</td><td>"+"</td><td>"+Overspeed[i]+"</td><td>"+"</td><td>"+LDWL[i]+"</td><td>"+"</td><td>"+LDWR[i]+"</td><td>"+"</td><td>"+PCW[i]+"</td><td>"+"</td><td>"+UFCW[i]+"</td>";
+        tbody.innerHTML=tbody.innerHTML+"<tr><td>"+rank[i]+"</td><td>"+names_arr[i]+"</button></td><td>"+overall[i]+"</td><td>"+FCW[i]+"</td><td>"+HMW[i]+"</td><td>"+"</td><td>"+Overspeed[i]+"</td><td>"+"</td><td>"+LDWL[i]+"</td><td>"+"</td><td>"+LDWR[i]+"</td><td>"+"</td><td>"+PCW[i]+"</td><td>"+"</td><td>"+UFCW[i]+"</td><td><button id="+(i+1)+">Show Details</button></td>";
     }
     console.log(thead);
     document.getElementById("table1").appendChild(thead);
@@ -76,7 +76,32 @@ frog.document.write(html);
 frog.document.close();
 
 }
-document.getElementById("")
+document.getElementById("1").onclick = function() {myFunction1()};function myFunction1(){popUp(driver_month[0],driver_month_freq[0]);}
+document.getElementById("2").onclick = function() {myFunction2()};function myFunction2(){popUp(driver_month[1],driver_month_freq[1]);}
+document.getElementById("3").onclick = function() {myFunction3()};function myFunction3(){popUp(driver_month[2],driver_month_freq[2]);}
+document.getElementById("4").onclick = function() {myFunction4()};function myFunction4(){popUp(driver_month[3],driver_month_freq[3]);}
+document.getElementById("5").onclick = function() {myFunction5()};function myFunction5(){popUp(driver_month[4],driver_month_freq[4]);}
+document.getElementById("6").onclick = function() {myFunction6()};function myFunction6(){popUp(driver_month[5],driver_month_freq[5]);}
+document.getElementById("7").onclick = function() {myFunction7()};function myFunction7(){popUp(driver_month[6],driver_month_freq[6]);}
+document.getElementById("8").onclick = function() {myFunction8()};function myFunction8(){popUp(driver_month[7],driver_month_freq[7]);}
+document.getElementById("9").onclick = function() {myFunction9()};function myFunction9(){popUp(driver_month[8],driver_month_freq[8]);}
+document.getElementById("10").onclick = function() {myFunction10()};function myFunction10(){popUp(driver_month[9],driver_month_freq[9]);}
+document.getElementById("11").onclick = function() {myFunction11()};function myFunction11(){popUp(driver_month[10],driver_month_freq[10]);}
+document.getElementById("12").onclick = function() {myFunction12()};function myFunction12(){popUp(driver_month[11],driver_month_freq[11]);}
+document.getElementById("13").onclick = function() {myFunction13()};function myFunction13(){popUp(driver_month[12],driver_month_freq[12]);}
+document.getElementById("14").onclick = function() {myFunction14()};function myFunction14(){popUp(driver_month[13],driver_month_freq[13]);}
+document.getElementById("15").onclick = function() {myFunction15()};function myFunction15(){popUp(driver_month[14],driver_month_freq[14]);}
+document.getElementById("16").onclick = function() {myFunction16()};function myFunction16(){popUp(driver_month[15],driver_month_freq[15]);}
+document.getElementById("17").onclick = function() {myFunction17()};function myFunction17(){popUp(driver_month[16],driver_month_freq[16]);}
+document.getElementById("18").onclick = function() {myFunction18()};function myFunction18(){popUp(driver_month[17],driver_month_freq[17]);}
+document.getElementById("19").onclick = function() {myFunction19()};function myFunction19(){popUp(driver_month[18],driver_month_freq[18]);}
+document.getElementById("20").onclick = function() {myFunction20()};function myFunction20(){popUp(driver_month[19],driver_month_freq[19]);}
+document.getElementById("21").onclick = function() {myFunction21()};function myFunction21(){popUp(driver_month[20],driver_month_freq[20]);}
+document.getElementById("22").onclick = function() {myFunction22()};function myFunction22(){popUp(driver_month[21],driver_month_freq[21]);}
+document.getElementById("23").onclick = function() {myFunction23()};function myFunction23(){popUp(driver_month[22],driver_month_freq[22]);}
+document.getElementById("24").onclick = function() {myFunction24()};function myFunction24(){popUp(driver_month[23],driver_month_freq[23]);}
+document.getElementById("25").onclick = function() {myFunction25()};function myFunction25(){popUp(driver_month[24],driver_month_freq[24]);}
+document.getElementById("26").onclick = function() {myFunction26()};function myFunction26(){popUp(driver_month[25],driver_month_freq[25]);}
 
 }
 });
