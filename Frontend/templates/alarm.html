@@ -37,6 +37,11 @@
             $("#row_2").hide();
         });
     });
+    $(document).ready(function(){
+        $("#resolve_1").click(function(){
+            $("#row_1").remove();
+        });
+    });
     </script>
 
 </head>
@@ -237,12 +242,12 @@
                                         <th>Nearest Police Deployment</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr id="row_1">
                                             <td>12432</td>
                                             <td>Location#1</td>
                                             <td>Location#2</td>
                                             <td>+91-8822777777</td>
-                                            <td><button type="button">Resolve</button></td>
+                                            <td><button id="resolve_1" type="button">Resolve</button></td>
                                         </tr>
                                         <tr id="row_2">
                                             <td>98778</td>
