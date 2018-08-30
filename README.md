@@ -1,6 +1,7 @@
 <h2>Transforming Real Time Collision Avoidance System Data into Actionable Insights to enhance Road Safety</h3>
 <p>-Team 6159 from BITS Pilani</p>
-<h3>-------->Product Walkthrough & Usage Instruction @ https://youtu.be/jZODCK89v9A</hr>
+<h3>-------->Product Walkthrough & Usage Instruction @ https://youtu.be/jZODCK89v9A</h3>
+<h2> (Please use headphones for better voice quality) </h2>
 <h3>USAGE INSTRUCTION</h3>
 <ol>
   <li>Clone/ Download the github repository</li>
