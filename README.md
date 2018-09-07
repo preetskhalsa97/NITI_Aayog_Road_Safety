@@ -2,7 +2,8 @@
 <p>-Team 6159 from BITS Pilani- Abhik Roy, Harsh Jaiswal, Preet S. Khalsa </p>
 <h3>-------->Product Walkthrough & Usage Instruction @ https://youtu.be/jZODCK89v9A</h3>
 <h2> (Please use headphones for better voice quality) </h2>
-<h3>USAGE INSTRUCTION</h3>
+<h4>USAGE INSTRUCTION</h4>
+<h4> Deck @  <a href="https://drive.google.com/file/d/1ffbWrfF4lGW1b3boS2PbBqr5IGlVVQZl/view?usp=sharing">this link</a>.</p> 
 <ol>
   <li>Clone/ Download the github repository</li>
   <li>Navigate to Fontend/Templates</li>
